@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.mutmut-cache
+mutants/
+setup.cfg
+.terraform/
+*.tfstate
+*.tfstate.backup
+.venv/
+*.egg-info/
+.env
+.env.*

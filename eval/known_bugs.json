@@ -1,0 +1,29 @@
+[
+  {
+    "id": "service-boundary",
+    "layer": "service",
+    "target_path": "app/service.py",
+    "scenario_file": "eval/scenarios/service-boundary/app/service.py",
+    "function": "OrderService.calculate_total",
+    "description": "Bulk discount threshold uses > instead of >=, so an order with exactly 5 items is silently overcharged.",
+    "deselect_test": "tests/test_service.py::test_calculate_total_exactly_five_items_gets_bulk_discount"
+  },
+  {
+    "id": "repository-pagination",
+    "layer": "repository",
+    "target_path": "app/repository.py",
+    "scenario_file": "eval/scenarios/repository-pagination/app/repository.py",
+    "function": "InMemoryOrderRepository.get_page",
+    "description": "Pagination slice end index uses page_size instead of (page+1)*page_size, so page >= 1 returns wrong or empty results.",
+    "deselect_test": "tests/test_service.py::test_get_page_second_page_returns_correct_slice"
+  },
+  {
+    "id": "api-missing-order",
+    "layer": "api",
+    "target_path": "app/api.py",
+    "scenario_file": "eval/scenarios/api-missing-order/app/api.py",
+    "function": "handle_get_order",
+    "description": "Handler no longer checks whether the order exists before computing a total, so an unknown order_id returns a fabricated total of 0.0 instead of an error.",
+    "deselect_test": null
+  }
+]
