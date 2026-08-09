@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Python 3.13](https://img.shields.io/badge/python-3.13-blue.svg)
 ![Built on AWS Bedrock AgentCore](https://img.shields.io/badge/built%20on-AWS%20Bedrock%20AgentCore-orange.svg)
-![Status: v1 in progress](https://img.shields.io/badge/status-v1%20in%20progress-yellow.svg)
+![Status: v1](https://img.shields.io/badge/status-v1%20in%20progress-yellow.svg)
 
 Your test suite says it's covered. Killjoy doesn't take its word for it.
 
